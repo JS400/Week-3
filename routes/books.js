@@ -65,19 +65,6 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// // Read - all books
-// router.get("/", async (req, res, next) => {
-//   let { page, perPage, query  } = req.query;
-//   page = page ? Number(page) : 0;
-//   perPage = perPage ? Number(perPage) : 10;
-//   try {
-//     const books = await bookDAO.getAll(page, perPage, query);
-//     res.json(books);
-//   } catch (e) {
-//     res.status(500).send(e.message);
-//   }
-// });
-
 // Update
 router.put("/:id", async (req, res, next) => {
   const bookId = req.params.id;
